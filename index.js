@@ -57,7 +57,50 @@ const questions = [
 
 // function to generate markdown using user input
 function generateMarkdown(answers) {
+    const {title, description, installation, usage, license, contributing, tests, email, github} = answers;
+    return `# ${title}
 
+## Description
+
+${description}
+
+## Table of Contents
+
+[Installation](#installation)
+
+[Usage](#usage)
+
+[Contributing](#contributing)
+
+[Tests](#tests)
+
+[Questions](#questions)
+
+## <a id="installation"></a> Installation
+
+${installation}
+
+## <a id="usage"></a>Usage
+
+${usage}
+
+## <a id="License"></a>License
+
+This project uses the ${license} license
+
+## <a id="contributing"></a>Contributing
+
+${contributing}
+
+## <a id="tests"></a>Tests
+
+${tests}
+
+## <a id="questions"></a>Questions
+
+Contact me directly at my email: ${email}
+
+Check out my other projects on my [github profile](${github})`
 }
 
 // function to write README file
