@@ -107,7 +107,7 @@ Check out my other projects on my [github profile](${github})`
 function writeToFile(fileName, data) {
     outputDir = "output/"
     fs.writeFile(outputDir + fileName, data, (err) => {
-        console.log(err);
+        err ? console.log(err) : console.log("wrote " + fileName + " successfully");
     });
 
 }
